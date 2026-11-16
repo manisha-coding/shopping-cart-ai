@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f4f6f9;
+}
+
+.site-header {
+  padding: 28px 5%;
+  color: white;
+  background: #243b63;
+}
+
+.site-header h1 {
+  margin: 0 0 8px;
+}
+
+.site-header p {
+  margin: 0;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 24px auto;
+  display: grid;
+  gap: 20px;
+}
+
+.panel {
+  padding: 22px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.section-heading,
+.filters,
+.assistant-controls,
+.cart-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.filters input {
+  min-width: 190px;
+}
+
+input,
+select,
+button {
+  padding: 10px 12px;
+  border: 1px solid #cbd2dc;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+button {
+  border: 0;
+  color: white;
+  background: #2457a6;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #183f7c;
+}
+
+button.danger {
+  background: #b83232;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.product-card,
+.cart-item {
+  padding: 15px;
+  border: 1px solid #e0e5ec;
+  border-radius: 9px;
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.muted {
+  color: #657080;
+  font-size: 14px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.cart-item input {
+  width: 75px;
+}
+
+.cart-footer {
+  padding-top: 16px;
+  border-top: 1px solid #e5e8ee;
+}
+
+.message,
+.answer {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+.answer {
+  padding: 12px;
+  background: #f1f5fb;
+  border-radius: 8px;
+}
+
+.assistant-controls input {
+  flex: 1;
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  color: #657080;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  .section-heading,
+  .filters,
+  .assistant-controls,
+  .cart-item {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filters input,
+  .filters select,
+  .assistant-controls input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>AI Shopping Store</h1>
+    <p>Browse products, manage your cart and ask the shopping assistant.</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="section-heading">
+        <h2>Product catalogue</h2>
+        <div class="filters">
+          <input id="searchInput" type="search" placeholder="Search products">
+          <select id="categoryFilter">
+            <option value="">All categories</option>
+            <option value="footwear">Footwear</option>
+            <option value="clothing">Clothing</option>
+            <option value="electronics">Electronics</option>
+            <option value="fitness">Fitness</option>
+          </select>
+          <button id="searchButton">Search</button>
+        </div>
+      </div>
+      <div id="products" class="product-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Your shopping cart</h2>
+      <div id="cart"></div>
+      <div class="cart-footer">
+        <strong id="cartTotal">Total: ₹0</strong>
+        <button id="checkoutButton">Checkout</button>
+      </div>
+      <p id="checkoutMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="panel assistant-panel">
+      <h2>AI shopping assistant</h2>
+      <p>Example: “Suggest a fitness product under ₹3,000.”</p>
+      <div class="assistant-controls">
+        <input id="questionInput" type="text" placeholder="Ask a question about our products">
+        <button id="askButton">Ask AI</button>
+      </div>
+      <p id="aiAnswer" class="answer" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Educational demo. Cart and orders are stored in memory and reset when the server restarts.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
